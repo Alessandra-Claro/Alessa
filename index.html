@@ -83,41 +83,43 @@
      PAGE 1 — HOME / HERO
   ══════════════════════════════ */
 /* Ensure the Alessa text in the Hero is huge and pink */
-.hero h1.cursive {
-    font-size: 6rem; /* Bigger, like your screenshot */
-    margin-bottom: 5px;
-    color: var(--hot-pink);
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.3); /* Adds that professional depth */
-}
-
 .hero {
-    height: 100vh; /* Changed from 85vh to 100vh for that full-screen impact */
-    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.3)), 
+    height: 85vh;
+    /* This gradient transitions from a dark tint to a subtle pink glow, 
+       ensuring your white text pops while the BTR photo looks integrated */
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(255, 105, 180, 0.2)), 
                 url('images/btr.jpeg') no-repeat center center/cover;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Better for centering stacked text and buttons */
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-    padding: 0 20px;
 }
 
-/* Fix the tagline to be slightly smaller and spaced out */
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
 .tagline {
-    font-size: 0.9rem; /* Smaller looks more "high fashion/tech" */
-    letter-spacing: 3px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 700;
-    opacity: 0.9;
 }
 
-/* Update the cursive class to match the photo's style */
 .cursive {
-    font-family: 'Pacifico', cursive; /* Swapped Great Vibes for Pacifico */
+    font-family: 'Great Vibes', cursive;
     color: var(--hot-pink);
+    font-size: 3rem;
     font-weight: normal;
-    /* Removed large font-size here so it doesn't break your nav logo */
 }
 
 .tagline {
@@ -126,33 +128,73 @@
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
-
-.hero-btns {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
+  
+/* Button Styles */
 .btn {
-    padding: 15px 35px;
-    border-radius: 50px; /* Makes them very round like the photo */
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--hot-pink);
+    color: var(--white);
     text-decoration: none;
+    border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
+    border: 2px solid var(--hot-pink);
 }
 
-/* The Pink Button */
-.btn {
-    background-color: #ff69b4;
-    color: white;
-    border: 2px solid #ff69b4;
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    background: transparent;
+    color: var(--hot-pink);
 }
 
-/* The Outline Button */
 .btn-outline {
-    background-color: transparent;
-    border: 2px solid white;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--dark-grey);
+    border: 2px solid var(--white);
+}
+
+/* Layout Components */
+.dark-bg {
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-left: 4px solid var(--hot-pink);
+}
+
+/* Project Items - Using the darker beige for depth */
+.project-item {
+    background: var(--light-grey);
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.tech-tag {
+    background: var(--hot-pink);
     color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 10px;
 }
   
   #home {

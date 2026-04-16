@@ -80,6 +80,58 @@
   /* ══════════════════════════════
      PAGE 1 — HOME / HERO
   ══════════════════════════════ */
+  .hero {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+  .cursive {
+    font-family: 'Cursive', 'Brush Script MT', sans-serif; /* Replace with your specific Google Font if you have one */
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+  .hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    background-color: var(--gold, #d4af37); /* Uses your gold theme color */
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+  
   #home {
     background: linear-gradient(135deg, #fff0f7 0%, #fdf6ee 50%, #fff8fb 100%);
     position: relative;
